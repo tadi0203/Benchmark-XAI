@@ -33,6 +33,7 @@ Benchmark/
 │       └── MLP_BDD_NEW_EXP.py          # XAI sur MLP
 │
 ├── evaluation/                         # Scripts bloc 4 : Robustesse 
+│   ├──Fidelite                         # Contient calibration modèle ML + explication XAI de la base perturbée   
 │   ├── Robustesse_LIME.py              # LIME
 │   ├── Robustesse_PFI.py               # PFI                       
 │   └── Robustesse_SHAP.py              # SHAP
