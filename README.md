@@ -1,11 +1,12 @@
 # Projet Benchmark 
 
 ##  Structure du projet
+```bash
 
 Benchmark/
 ├── data/                               # Données  
-│   ├── real bdd modif.xlsx             # Données expérimentales réelles
-│   ├── simulated_results.csv           # (old_bdd) Base de référence
+│   ├── real bdd modif.xlsx             # Données expérimentales réelles (privé)
+│   ├── simulated_results.csv           # (old_bdd) Base de référence    (privé)
 │   ├── synthetic_dataset_filtered.csv  # (new_bdd) Base optimale 
 │   └── perturbed_data.csv              #           Base perturbée
 │
@@ -41,15 +42,15 @@ Benchmark/
 │       ├── __init__.py
 │       ├── io.py                       # Chemins: DATA/MODELS/XAI 
 │       ├── config.py                   # FEATURES, TARGETS, SEED
-│       ├── physics.py                  # simulate_row / system
+│       ├── physics.py                  # simulate_row / system     (privé)
 │       └── data/
 │           └── datasets.py             # get_df("old_bdd"/"new_bdd")
 │
 │
 ├── pyproject.toml                      # Projet Poetry (package = "benchmark")
 ├── README.md                           # ce fichier
-└── setup_env.ps1                       # Preparation de l'environnement virtuelle de projet
-
+└── setup_env.ps1                       # Preparation de l'environnement virtuelle de projet (privé)
+```
 ---
 
 ##  Objectifs du projet
