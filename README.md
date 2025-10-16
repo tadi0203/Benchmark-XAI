@@ -92,7 +92,7 @@ df_new = get_df("new_bdd")
 --- 
  
 ## Installation & Environnement
-Poetry + venv gérés par setup_env.ps1  
+Poetry + venv gérés par setup_env.ps1   (Privé)
 
 
 ---
@@ -161,6 +161,7 @@ poetry run python evaluation\Robustesse_PFI.py
 ---
 
 ##  Sorties principales
+```bash
 Modèles ML
     models/old_bdd/modele_<model>_<target>.joblib
     models/new_bdd/*.joblib
@@ -168,12 +169,12 @@ Modèles ML
 Explicabilité
     interpretability/<dataset>/<model>/<target>/…
     SHAP (summary), PFI (csv + barplot), PDP, LIME (global + nuage)
-
+```
 ---
 
 ##  Auteur
 
-Projet construit par \[HAMMAMI Mohtadi] dans le cadre d'un benchmark XAI sur modèles ML.
+Projet construit par HAMMAMI Mohtadi dans le cadre d'un benchmark XAI sur modèles ML.
 
 ---
 
