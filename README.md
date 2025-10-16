@@ -97,23 +97,24 @@ Poetry + venv gérés par setup_env.ps1
 ---
 
 ## Technologies & Librairies
+```bash
 
-python = "^3.11"
-pandas = "^2.2.2"
-numpy = "^1.26.4"
-scikit-learn = "^1.4.2"
-matplotlib = "^3.8.4"
-seaborn = "^0.13.2"
-shap = "^0.48.0"
-lime = "^0.2.0.1"
-joblib = "^1.4.2"
-openpyxl = "^3.1.2"
-SALib = "^1.4.7"
-
+python = "3.11"
+pandas = "2.2.2"
+numpy = "1.26.4"
+scikit-learn = "1.4.2"
+matplotlib = "3.8.4"
+seaborn = "0.13.2"
+shap = "0.48.0"
+lime = "0.2.0.1"
+joblib = "1.4.2"
+openpyxl = "3.1.2"
+SALib = "1.4.7"
+```
 ---
 
 
-Utilisation (principales commandes)
+## Utilisation (principales commandes)
 1) Bloc Données
 ```bash
 
