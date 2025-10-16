@@ -90,6 +90,58 @@ df_new = get_df("new_bdd")
 
 
 --- 
+
+
+## Guide d’interprétation des graphes XAI et Sobol
+Cette partie présente des éléments méthodologiques permettant de comprendre et d’interpréter correctement les graphiques générés par les différentes méthodes d’explicabilité utilisées dans ce projet.
+### 1. Graphe de Beeswarm
+— La position sur l’axe horizontal traduit l’impact de la variable sur la sortie (valeurs positives augmentent la prédiction, négatives la diminuent).
+
+— La couleur (rouge/bleu) correspond à la valeur de la variable (élevée ou faible).
+
+— L’interprétation se fait à la fois au niveau local (pour une observation) et global (pour l’ensemble du jeu de données). 
+
+Exemple de graphe Beeswarm pour les valeurs SHAP :
+<p align="center">
+  <img src="figures/SHAP.png" width="400" alt="SHAP"/>
+</p>
+
+### 2. Graphe d’importance globale
+— Plus la barre est grande, plus la variable est jugée importante.
+
+— Ces résultats sont globaux et permettent de classer les variables par ordre d’importance.
+
+Exemple de graphe d’importance globale pour la méthode LIME/PFI :
+<p align="center">
+  <img src="figures/PFI.png" width="400" alt="SHAP"/>
+</p>
+
+### 3. Graphe de dépendance
+— Distribution la sortie (N/S) des données test en fonction de chaque variable.
+
+— Information sur la nature de la relation entre variable et cible (linéaire, non linéaire, corrélation, Independence . . .).
+
+— Les histogrammes représentent la population des données expliquées. 
+
+Exemple de graphe de dépendance pour la méthode PDP :
+<p align="center">
+  <img src="figures/PDP.png" width="400" alt="SHAP"/>
+</p>
+
+### 4. Indices de Sobol
+Les indices de Sobol sont représentés par des barres indiquant la part de variance expliquée par chaque variable d’entrée.
+
+— L’indice de premier ordre mesure l’effet direct d’une variable.
+
+— L’indice total prend en compte à la fois l’effet direct et les interactions.
+
+— Plus l’indice est élevé, plus la variable contribue à l’incertitude globale de la sortie.
+
+Exemple de représentation graphique des indices de Sobol :
+<p align="center">
+  <img src="figures/Sobol.png" width="400" alt="SHAP"/>
+</p>
+
  
 ## Installation & Environnement
 Poetry + venv gérés par setup_env.ps1   (Privé)
