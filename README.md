@@ -32,11 +32,11 @@ Benchmark/
 │       ├── RF_BDD_NEW_EXP.py           # XAI sur Random Forest
 │       └── MLP_BDD_NEW_EXP.py          # XAI sur MLP
 │
-├── evaluation/                         # Scripts bloc 4 : Robustesse 
-│   ├──Fidelite                         # Contient calibration modèle ML + explication XAI de la base perturbée   
-│   ├── Robustesse_LIME.py              # LIME
-│   ├── Robustesse_PFI.py               # PFI                       
-│   └── Robustesse_SHAP.py              # SHAP
+├── evaluation/                         # Scripts bloc 4 : Robustesse et Stabilité  
+│   ├── Robustesse_LIME.py              # Robustesse LIME
+│   ├── Robustesse_PFI.py               # Robustesse PFI                       
+│   ├── Robustesse_SHAP.py              # Robustesse SHAP
+│   └───Fidelite                        # Stabilité : Contient calibration modèle ML + explication XAI de la base perturbée   
 │
 ├── src/                                # Package 
 │   └── benchmark/
@@ -56,12 +56,12 @@ Benchmark/
 
 ##  Objectifs du projet
 
-1. Générer des données (base de référence et base optimale).
+1. Générer des données (base de référence, base optimale et base perturbée).
 2. Entraîner plusieurs régressions (SVM, Lasso, Polynomial, MLP, GBR, RF).
-3. Comparer les performances (R², MAE, RMSE, MAPE).
+3. Comparer les performances (R², MAE, RMSE, MAPE, Graphe de parité).
 4. Analyser la sensibilité du modèle physique
-5. Appliquer des méthodes d’interprétabilité : SHAP, LIME, PDP, PFI 
-6. Analyser la robustesse des méthodes XAI
+5. Appliquer des méthodes d’interprétabilité : SHAP, LIME, PDP, PFI, indice de Sobol
+6. Analyser la fidélité, robustesse et stabilité des méthodes XAI
 
 ---
 
@@ -144,7 +144,7 @@ Exemple de représentation graphique des indices de Sobol :
 
  
 ## Installation & Environnement
-Poetry + venv gérés par setup_env.ps1   (Privé)
+Poetry + venv gérés par setup_env.ps1   
 
 
 ---
