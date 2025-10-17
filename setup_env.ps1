@@ -5,8 +5,7 @@
 Write-Host "Démarrage de la configuration de l'environnement Benchmark..."
 
 # Étape 1 : Configuration proxy 
-$env:http_proxy = "http://proxy.ens-lyon.fr:3128"
-$env:https_proxy = "http://proxy.ens-lyon.fr:3128"
+# (Privé)
 Write-Host "Proxy configuré"
 
 # Étape 2 : Installation de Scoop 
@@ -65,3 +64,4 @@ $activateScript = "$projectPath\.venv\Scripts\Activate.ps1"
 Write-Host "Exécution terminée. Pour activer l'environnement, exécute :"
 Write-Host ""
 Write-Host "    & `"$activateScript`""
+
